@@ -82,7 +82,7 @@ body {
 }
 
 .site-header {
-  box-shadow: 0 2px #e2e8f0;
+  box-shadow: 0 12px 32px -28px rgba(11, 30, 63, 0.45);
 }
 
 h1,
@@ -332,34 +332,14 @@ h4 {
   inset: -120px;
   z-index: 0;
   pointer-events: none;
-  background-image:
-    linear-gradient(
-      to right,
-      rgba(13, 67, 167, 0.22) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      to bottom,
-      rgba(13, 67, 167, 0.22) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      to right,
-      rgba(13, 67, 167, 0.13) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      to bottom,
-      rgba(13, 67, 167, 0.13) 1px,
-      transparent 1px
-    );
-  background-size:
-    112px 112px,
-    112px 112px,
-    28px 28px,
-    28px 28px;
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(13, 67, 167, 0.2) 0 1px,
+    transparent 1px 36px
+  );
+  opacity: 0.5;
   will-change: transform;
-  animation: home-pattern-pan 12.8s linear infinite;
+  animation: home-pattern-pan 12s linear infinite;
 }
 
 @keyframes home-pattern-pan {
@@ -367,7 +347,7 @@ h4 {
     transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translate3d(112px, 0, 0);
+    transform: translate3d(50.91px, 0, 0);
   }
 }
 

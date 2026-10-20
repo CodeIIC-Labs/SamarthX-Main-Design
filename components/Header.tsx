@@ -27,7 +27,7 @@ export default function Header() {
 
   return (
     <header className="site-header fixed inset-x-0 top-0 z-[100] w-full">
-      <div className="border-b border-gray-200 bg-white">
+      <div className="border-b border-[#E7EEF9] bg-white/85 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
           <div className="shrink-0">
             <Link href="/" className="block" aria-label="SamarthX home">
@@ -72,7 +72,7 @@ export default function Header() {
           </div>
 
           <div className="flex shrink-0 items-center gap-3">
-            <div className="hidden w-56 items-center gap-2 rounded-full bg-gray-100 px-4 py-2 lg:flex">
+            <div className="hidden w-56 items-center gap-2 rounded-full bg-[#F3F7FD] px-4 py-2 lg:flex">
               <SearchIcon className="shrink-0 text-gray-400" />
               <input
                 type="text"
@@ -81,16 +81,6 @@ export default function Header() {
                 className="w-full bg-transparent text-sm text-gray-700 outline-none placeholder:text-gray-400"
               />
             </div>
-
-            <a
-              href="https://goa.samarthx.ac.in/auth/login-dhe"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-display hidden shrink-0 items-center rounded-full px-5 py-2.5 text-sm font-bold text-white no-underline transition-all duration-300 hover:-translate-y-0.5 md:inline-flex"
-              style={{ backgroundColor: "var(--brand)" }}
-            >
-              Admin Login
-            </a>
 
             <button
               type="button"

@@ -73,14 +73,15 @@ export default function Hero() {
         </div>
 
         <h1
-          className="animate-fade-in-up animation-delay-200 mx-auto mt-2.5 max-w-[1000px] text-center leading-[1.05] font-extrabold tracking-[-0.035em] sm:mt-3"
+          className="animate-fade-in-up animation-delay-200 mx-auto mt-2.5 max-w-[1000px] text-center leading-[1.05] font-extrabold tracking-[-0.035em] sm:mt-2.5"
           style={{
             color: "var(--ink)",
-            fontSize: "clamp(2.2rem, 5.2vw, 3.5rem)",
+            fontSize: "clamp(2.2rem, 5.2vw, 3.4rem)",
           }}
         >
-          Bringing Every School Together on
+          Bringing Every
           <br />
+          School Together on{" "}
           <span
             className="font-script relative inline-block tracking-normal whitespace-nowrap"
             style={{
@@ -110,7 +111,7 @@ export default function Hero() {
         </h1>
 
         <p
-          className="animate-fade-in-up animation-delay-200 mx-auto mt-3.5 max-w-[720px] text-center text-[15px] leading-relaxed sm:text-base"
+          className="animate-fade-in-up animation-delay-200 mx-auto mt-3 max-w-[720px] text-center text-[15px] leading-relaxed sm:text-base"
           style={{ color: "var(--muted)" }}
         >
           SamarthX brings governance, administration, people and student
@@ -118,7 +119,7 @@ export default function Hero() {
           faster and make better decisions.
         </p>
 
-        <div className="animate-fade-in-up animation-delay-400 mt-4 flex justify-center lg:mt-5">
+        <div className="animate-fade-in-up animation-delay-400 mt-4 flex justify-center lg:mt-4">
           <Link
             href="/about-us"
             className="group inline-flex items-center gap-2.5 rounded-full px-6 py-3 text-sm font-bold text-white no-underline shadow-[0_18px_32px_-18px_rgba(13,67,167,0.9)] transition-transform duration-300 hover:-translate-y-0.5"
@@ -147,7 +148,7 @@ export default function Hero() {
           </Link>
         </div>
 
-        <div className="mt-4 grid gap-5 lg:mt-5 lg:grid-cols-[0.82fr_2.05fr_0.82fr] lg:items-center lg:gap-6">
+        <div className="mt-4 grid gap-5 lg:mt-4 lg:grid-cols-[0.82fr_2.05fr_0.82fr] lg:items-center lg:gap-6">
           <div className="order-2 grid grid-cols-2 items-stretch gap-4 lg:contents">
             <aside className="animate-fade-in-up animation-delay-400 lg:order-1">
               <div className="relative flex h-full w-full flex-col items-center justify-center rounded-[1.35rem] border border-white/90 bg-white/60 px-3.5 py-5 text-center shadow-[0_24px_44px_-38px_rgba(11,30,63,0.5)] backdrop-blur-sm transition-transform duration-300 hover:rotate-0 lg:-rotate-2 lg:px-4">
