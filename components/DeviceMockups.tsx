@@ -32,7 +32,7 @@ export function LaptopMockup({ className, style }: MockupProps) {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(90deg, #7FA9F8 0 50%, #FBF7FF 50% 100%) top / 100% 12.25% no-repeat",
+              "linear-gradient(90deg, #76AAFE 0 50%, #F8F9FC 50% 100%) top / 100% 12.25% no-repeat, linear-gradient(90deg, #E9F1FE 0 50%, #F1F5FF 50% 100%)",
           }}
           aria-hidden="true"
         />
