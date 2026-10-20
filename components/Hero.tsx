@@ -8,6 +8,20 @@ const AVATARS = [
   { src: "/images/news/academic-year.webp", alt: "Students at their desks" },
 ];
 
+type CardKind = "mission" | "employees" | "admissions" | "schools";
+
+const CARD_ORDER: CardKind[] = ["mission", "employees", "admissions", "schools"];
+
+const CARD_POSITION: Record<CardKind, string> = {
+  mission: "lg:col-start-1 lg:row-start-1 xl:self-center",
+  employees:
+    "lg:col-start-3 lg:row-start-1 xl:col-start-4 xl:self-center",
+  admissions:
+    "lg:col-start-1 lg:row-start-2 xl:col-start-2 xl:row-start-1 xl:self-center",
+  schools:
+    "lg:col-start-3 lg:row-start-2 xl:col-start-5 xl:row-start-1 xl:self-center",
+};
+
 function GoArrow({ size = 16 }: { size?: number }) {
   return (
     <svg
@@ -45,6 +59,168 @@ function AvatarRow({ size = 30 }: { size?: number }) {
             className="object-cover"
           />
         </span>
+      ))}
+    </div>
+  );
+}
+
+function StatCard({ kind }: { kind: CardKind }) {
+  if (kind === "mission") {
+    return (
+      <div className="relative flex h-full w-full flex-col items-center justify-center rounded-[1.35rem] border border-white/90 bg-white/60 px-3.5 py-4 text-center shadow-[0_24px_44px_-38px_rgba(11,30,63,0.5)] backdrop-blur-sm transition-transform duration-300 hover:rotate-0 lg:-rotate-2 lg:px-4">
+        <span
+          className="absolute -top-2 left-1/2 h-4 w-14 -translate-x-1/2 -rotate-2 rounded-[3px] bg-[#C4D9FA]/90 shadow-sm"
+          aria-hidden="true"
+        />
+        <span
+          className="flex h-11 w-11 items-center justify-center rounded-full text-white shadow-[0_14px_24px_-14px_rgba(13,67,167,0.75)]"
+          style={{
+            background:
+              "linear-gradient(145deg, #1A73E9 0%, #0D43A7 55%, #08307E 100%)",
+          }}
+        >
+          <CapDoodle className="h-6 w-6" />
+        </span>
+        <p
+          className="mt-2.5 text-[8.5px] font-bold uppercase tracking-[0.18em]"
+          style={{ color: "var(--brand)" }}
+        >
+          The mission
+        </p>
+        <p
+          className="mt-1.5 font-display text-[12.5px] leading-snug font-bold"
+          style={{ color: "var(--ink)" }}
+        >
+          Built at the University of Delhi, with the Government of Goa.
+        </p>
+        <Link
+          href="/about-us"
+          className="mt-3 inline-flex items-center gap-1.5 text-[11.5px] font-bold no-underline transition-all hover:gap-2.5"
+          style={{ color: "var(--brand)" }}
+        >
+          Explore more
+          <GoArrow size={12} />
+        </Link>
+        <Sparkle size={11} className="absolute top-4 right-3 text-[#A6C7F5]" />
+      </div>
+    );
+  }
+
+  if (kind === "employees") {
+    return (
+      <div className="relative flex h-full w-full flex-col items-center justify-center rounded-[1.35rem] border border-white/90 bg-gradient-to-br from-[#FFF3D6] via-[#FFFBF0] to-white/70 px-3.5 py-5 text-center shadow-[0_24px_44px_-38px_rgba(11,30,63,0.5)] backdrop-blur-sm transition-transform duration-300 hover:rotate-0 lg:rotate-2 lg:px-4">
+        <span
+          className="absolute -top-2 left-1/2 h-4 w-14 -translate-x-1/2 rotate-2 rounded-[3px] bg-[#FFE2A8]/95 shadow-sm"
+          aria-hidden="true"
+        />
+        <AvatarRow size={30} />
+        <p
+          className="font-display mt-2.5 text-[2rem] leading-none font-extrabold tracking-tight"
+          style={{ color: "var(--ink)" }}
+        >
+          20,877
+        </p>
+        <p
+          className="mt-1.5 text-[11.5px] font-semibold"
+          style={{ color: "var(--ink)" }}
+        >
+          Employees onboarded
+        </p>
+        <p
+          className="mt-0.5 text-[10px] leading-snug"
+          style={{ color: "var(--muted)" }}
+        >
+          Trusted across Goa&rsquo;s schools
+        </p>
+        <Sparkle size={11} className="absolute right-3 bottom-4 text-[#E9B23C]" />
+      </div>
+    );
+  }
+
+  if (kind === "admissions") {
+    return (
+      <div className="relative flex h-full w-full flex-col items-center justify-center rounded-[1.35rem] border border-white/90 bg-gradient-to-br from-[#FFF3D6] via-[#FFFBF0] to-white/70 px-3.5 py-3.5 text-center shadow-[0_24px_44px_-38px_rgba(11,30,63,0.5)] backdrop-blur-sm transition-transform duration-300 hover:rotate-0 lg:rotate-[1.5deg] lg:px-4">
+        <span
+          className="absolute -top-2 left-1/2 h-4 w-14 -translate-x-1/2 rotate-1 rounded-[3px] bg-[#FFE2A8]/95 shadow-sm"
+          aria-hidden="true"
+        />
+        <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/85 shadow-sm ring-1 ring-[#FFE2A8]">
+          <AdmissionsArt size={24} />
+        </span>
+        <p
+          className="font-display mt-1.5 text-[2rem] leading-none font-extrabold tracking-tight"
+          style={{ color: "var(--ink)" }}
+        >
+          5,000<span style={{ color: "#C98A00" }}>+</span>
+        </p>
+        <p
+          className="mt-1.5 text-[11.5px] font-semibold"
+          style={{ color: "var(--ink)" }}
+        >
+          Admissions delivered
+        </p>
+        <p
+          className="mt-0.5 text-[10px] leading-snug"
+          style={{ color: "var(--muted)" }}
+        >
+          One window for every student
+        </p>
+        <Sparkle size={11} className="absolute right-3 bottom-4 text-[#E9B23C]" />
+      </div>
+    );
+  }
+
+  return (
+    <div className="relative flex h-full w-full flex-col items-center justify-center rounded-[1.35rem] border border-white/90 bg-white/60 px-3.5 py-4 text-center shadow-[0_24px_44px_-38px_rgba(11,30,63,0.5)] backdrop-blur-sm transition-transform duration-300 hover:rotate-0 lg:-rotate-[1.5deg] lg:px-4">
+      <span
+        className="absolute -top-2 left-1/2 h-4 w-14 -translate-x-1/2 -rotate-1 rounded-[3px] bg-[#C4D9FA]/90 shadow-sm"
+        aria-hidden="true"
+      />
+      <span
+        className="flex h-11 w-11 items-center justify-center rounded-full text-white shadow-[0_14px_24px_-14px_rgba(13,67,167,0.75)]"
+        style={{
+          background:
+            "linear-gradient(145deg, #1A73E9 0%, #0D43A7 55%, #08307E 100%)",
+        }}
+      >
+        <SchoolDoodle className="h-6 w-6" />
+      </span>
+      <p
+        className="mt-2.5 text-[8.5px] font-bold uppercase tracking-[0.18em]"
+        style={{ color: "var(--brand)" }}
+      >
+        The reach
+      </p>
+      <p
+        className="mt-1.5 font-display text-[12.5px] leading-snug font-bold"
+        style={{ color: "var(--ink)" }}
+      >
+        1,483 schools connected across Goa.
+      </p>
+      <Link
+        href="/state-onboarded"
+        className="mt-3 inline-flex items-center gap-1.5 text-[11.5px] font-bold no-underline transition-all hover:gap-2.5"
+        style={{ color: "var(--brand)" }}
+      >
+        See the rollout
+        <GoArrow size={12} />
+      </Link>
+      <Sparkle size={11} className="absolute top-4 right-3 text-[#A6C7F5]" />
+    </div>
+  );
+}
+
+function MarqueeSet({ clone = false }: { clone?: boolean }) {
+  return (
+    <div
+      className="flex shrink-0 gap-4 pr-4"
+      aria-hidden={clone || undefined}
+      inert={clone || undefined}
+    >
+      {CARD_ORDER.map((kind) => (
+        <div key={kind} className="w-[200px] shrink-0">
+          <StatCard kind={kind} />
+        </div>
       ))}
     </div>
   );
@@ -149,144 +325,15 @@ export default function Hero() {
         </div>
 
         <div className="mt-4 grid gap-5 lg:mt-4 lg:grid-cols-[0.82fr_2.05fr_0.82fr] lg:gap-x-6 lg:gap-y-4 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_500px_minmax(0,1fr)_minmax(0,1fr)] xl:gap-x-4 2xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_540px_minmax(0,1fr)_minmax(0,1fr)]">
-          <div className="order-2 grid grid-cols-2 items-stretch gap-4 lg:contents">
-            <aside className="animate-fade-in-up animation-delay-400 lg:col-start-1 lg:row-start-1 xl:self-center">
-              <div className="relative flex h-full w-full flex-col items-center justify-center rounded-[1.35rem] border border-white/90 bg-white/60 px-3.5 py-4 text-center shadow-[0_24px_44px_-38px_rgba(11,30,63,0.5)] backdrop-blur-sm transition-transform duration-300 hover:rotate-0 lg:-rotate-2 lg:px-4">
-                <span
-                  className="absolute -top-2 left-1/2 h-4 w-14 -translate-x-1/2 -rotate-2 rounded-[3px] bg-[#C4D9FA]/90 shadow-sm"
-                  aria-hidden="true"
-                />
-                <span
-                  className="flex h-11 w-11 items-center justify-center rounded-full text-white shadow-[0_14px_24px_-14px_rgba(13,67,167,0.75)]"
-                  style={{
-                    background:
-                      "linear-gradient(145deg, #1A73E9 0%, #0D43A7 55%, #08307E 100%)",
-                  }}
-                >
-                  <CapDoodle className="h-6 w-6" />
-                </span>
-                <p
-                  className="mt-2.5 text-[8.5px] font-bold uppercase tracking-[0.18em]"
-                  style={{ color: "var(--brand)" }}
-                >
-                  The mission
-                </p>
-                <p
-                  className="mt-1.5 font-display text-[12.5px] leading-snug font-bold"
-                  style={{ color: "var(--ink)" }}
-                >
-                  Built at the University of Delhi, with the Government of Goa.
-                </p>
-                <Link
-                  href="/about-us"
-                  className="mt-3 inline-flex items-center gap-1.5 text-[11.5px] font-bold no-underline transition-all hover:gap-2.5"
-                  style={{ color: "var(--brand)" }}
-                >
-                  Explore more
-                  <GoArrow size={12} />
-                </Link>
-                <Sparkle size={11} className="absolute top-4 right-3 text-[#A6C7F5]" />
-              </div>
-            </aside>
-
-            <aside className="animate-fade-in-up animation-delay-400 lg:col-start-3 lg:row-start-1 xl:col-start-4 xl:self-center">
-              <div className="relative flex h-full w-full flex-col items-center justify-center rounded-[1.35rem] border border-white/90 bg-gradient-to-br from-[#FFF3D6] via-[#FFFBF0] to-white/70 px-3.5 py-5 text-center shadow-[0_24px_44px_-38px_rgba(11,30,63,0.5)] backdrop-blur-sm transition-transform duration-300 hover:rotate-0 lg:rotate-2 lg:px-4">
-                <span
-                  className="absolute -top-2 left-1/2 h-4 w-14 -translate-x-1/2 rotate-2 rounded-[3px] bg-[#FFE2A8]/95 shadow-sm"
-                  aria-hidden="true"
-                />
-                <AvatarRow size={30} />
-                <p
-                  className="font-display mt-2.5 text-[2rem] leading-none font-extrabold tracking-tight"
-                  style={{ color: "var(--ink)" }}
-                >
-                  20,877
-                </p>
-                <p
-                  className="mt-1.5 text-[11.5px] font-semibold"
-                  style={{ color: "var(--ink)" }}
-                >
-                  Employees onboarded
-                </p>
-                <p
-                  className="mt-0.5 text-[10px] leading-snug"
-                  style={{ color: "var(--muted)" }}
-                >
-                  Trusted across Goa&rsquo;s schools
-                </p>
-                <Sparkle size={11} className="absolute bottom-4 right-3 text-[#E9B23C]" />
-              </div>
-            </aside>
-
-            <aside className="animate-fade-in-up animation-delay-400 lg:col-start-1 lg:row-start-2 xl:col-start-2 xl:row-start-1 xl:self-center">
-              <div className="relative flex h-full w-full flex-col items-center justify-center rounded-[1.35rem] border border-white/90 bg-gradient-to-br from-[#FFF3D6] via-[#FFFBF0] to-white/70 px-3.5 py-3.5 text-center shadow-[0_24px_44px_-38px_rgba(11,30,63,0.5)] backdrop-blur-sm transition-transform duration-300 hover:rotate-0 lg:rotate-[1.5deg] lg:px-4">
-                <span
-                  className="absolute -top-2 left-1/2 h-4 w-14 -translate-x-1/2 rotate-1 rounded-[3px] bg-[#FFE2A8]/95 shadow-sm"
-                  aria-hidden="true"
-                />
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/85 shadow-sm ring-1 ring-[#FFE2A8]">
-                  <AdmissionsArt size={24} />
-                </span>
-                <p
-                  className="font-display mt-1.5 text-[2rem] leading-none font-extrabold tracking-tight"
-                  style={{ color: "var(--ink)" }}
-                >
-                  5,000<span style={{ color: "#C98A00" }}>+</span>
-                </p>
-                <p
-                  className="mt-1.5 text-[11.5px] font-semibold"
-                  style={{ color: "var(--ink)" }}
-                >
-                  Admissions delivered
-                </p>
-                <p
-                  className="mt-0.5 text-[10px] leading-snug"
-                  style={{ color: "var(--muted)" }}
-                >
-                  One window for every student
-                </p>
-                <Sparkle size={11} className="absolute bottom-4 right-3 text-[#E9B23C]" />
-              </div>
-            </aside>
-
-            <aside className="animate-fade-in-up animation-delay-400 lg:col-start-3 lg:row-start-2 xl:col-start-5 xl:row-start-1 xl:self-center">
-              <div className="relative flex h-full w-full flex-col items-center justify-center rounded-[1.35rem] border border-white/90 bg-white/60 px-3.5 py-4 text-center shadow-[0_24px_44px_-38px_rgba(11,30,63,0.5)] backdrop-blur-sm transition-transform duration-300 hover:rotate-0 lg:-rotate-[1.5deg] lg:px-4">
-                <span
-                  className="absolute -top-2 left-1/2 h-4 w-14 -translate-x-1/2 -rotate-1 rounded-[3px] bg-[#C4D9FA]/90 shadow-sm"
-                  aria-hidden="true"
-                />
-                <span
-                  className="flex h-11 w-11 items-center justify-center rounded-full text-white shadow-[0_14px_24px_-14px_rgba(13,67,167,0.75)]"
-                  style={{
-                    background:
-                      "linear-gradient(145deg, #1A73E9 0%, #0D43A7 55%, #08307E 100%)",
-                  }}
-                >
-                  <SchoolDoodle className="h-6 w-6" />
-                </span>
-                <p
-                  className="mt-2.5 text-[8.5px] font-bold uppercase tracking-[0.18em]"
-                  style={{ color: "var(--brand)" }}
-                >
-                  The reach
-                </p>
-                <p
-                  className="mt-1.5 font-display text-[12.5px] leading-snug font-bold"
-                  style={{ color: "var(--ink)" }}
-                >
-                  1,483 schools connected across Goa.
-                </p>
-                <Link
-                  href="/state-onboarded"
-                  className="mt-3 inline-flex items-center gap-1.5 text-[11.5px] font-bold no-underline transition-all hover:gap-2.5"
-                  style={{ color: "var(--brand)" }}
-                >
-                  See the rollout
-                  <GoArrow size={12} />
-                </Link>
-                <Sparkle size={11} className="absolute top-4 right-3 text-[#A6C7F5]" />
-              </div>
-            </aside>
+          <div className="hidden lg:contents">
+            {CARD_ORDER.map((kind) => (
+              <aside
+                key={kind}
+                className={`animate-fade-in-up animation-delay-400 ${CARD_POSITION[kind]}`}
+              >
+                <StatCard kind={kind} />
+              </aside>
+            ))}
           </div>
 
           <div className="animate-fade-in-up animation-delay-200 order-1 lg:order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:self-center xl:col-start-3 xl:row-span-1">
@@ -301,7 +348,7 @@ export default function Hero() {
                   alt="Students presenting a smart irrigation project at the National Science Fair"
                   fill
                   priority
-                  sizes="(min-width: 1024px) 520px, 100vw"
+                  sizes="(min-width: 1024px) 540px, 100vw"
                   className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.035]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-[#071a38]/40 via-transparent to-[#071a38]/50" />
@@ -347,6 +394,16 @@ export default function Hero() {
                   </span>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div
+            className="hero-marquee order-2 py-3 lg:hidden"
+            aria-label="SamarthX platform highlights"
+          >
+            <div className="hero-marquee-track flex">
+              <MarqueeSet />
+              <MarqueeSet clone />
             </div>
           </div>
         </div>

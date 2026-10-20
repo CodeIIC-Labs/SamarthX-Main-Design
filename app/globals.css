@@ -357,6 +357,58 @@ h4 {
   }
 }
 
+.hero-marquee {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 20px,
+    #000 calc(100% - 20px),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 20px,
+    #000 calc(100% - 20px),
+    transparent 100%
+  );
+}
+
+.hero-marquee::-webkit-scrollbar {
+  display: none;
+}
+
+.hero-marquee-track {
+  width: max-content;
+  align-items: stretch;
+  animation: hero-marquee 36s linear infinite;
+  will-change: transform;
+}
+
+.hero-marquee:hover .hero-marquee-track,
+.hero-marquee:focus-within .hero-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes hero-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-marquee-track {
+    animation: none !important;
+  }
+}
+
 .panel {
   background: #ffffff;
   border: 1px solid rgba(13, 67, 167, 0.12);
