@@ -9,13 +9,17 @@ import WhyBand from "@/components/WhyBand";
 export default function Home() {
   return (
     <div className="home-page">
-      <Hero />
-      <WhyBand />
-      <Story />
-      <PortalGrid />
-      <SmarterWay />
-      <FieldNotes />
-      <BigCta />
+      <div className="home-pattern" aria-hidden="true" />
+
+      <div className="relative z-[1]">
+        <Hero />
+        <WhyBand />
+        <Story />
+        <PortalGrid />
+        <SmarterWay />
+        <FieldNotes />
+        <BigCta />
+      </div>
     </div>
   );
 }

@@ -296,6 +296,9 @@ h4 {
 }
 
 .home-page {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   background:
     radial-gradient(
       46rem 34rem at 82% -8%,
@@ -313,6 +316,56 @@ h4 {
       rgba(237, 244, 255, 0) 70%
     ),
     linear-gradient(180deg, #f7faff 0%, #f3f8ff 30%, #fbfdff 64%, #ffffff 100%);
+}
+
+.home-pattern {
+  position: absolute;
+  inset: -120px;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(13, 67, 167, 0.22) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(13, 67, 167, 0.22) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to right,
+      rgba(13, 67, 167, 0.13) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(13, 67, 167, 0.13) 1px,
+      transparent 1px
+    );
+  background-size:
+    112px 112px,
+    112px 112px,
+    28px 28px,
+    28px 28px;
+  will-change: transform;
+  animation: home-pattern-pan 12.8s linear infinite;
+}
+
+@keyframes home-pattern-pan {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(112px, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-pattern {
+    animation: none !important;
+  }
 }
 
 .panel {
