@@ -56,22 +56,6 @@ export default function Hero() {
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
         <div className="absolute -top-8 -left-24 h-72 w-72 rounded-full bg-[#CFE1FF] opacity-60 blur-3xl" />
         <div className="absolute top-12 -right-20 h-64 w-64 rounded-full bg-[#FFE3AD] opacity-55 blur-3xl" />
-        <div
-          className="absolute top-32 left-[4%] hidden h-24 w-24 opacity-40 lg:block"
-          style={{
-            backgroundImage: "radial-gradient(#9FBCEE 1.3px, transparent 1.3px)",
-            backgroundSize: "13px 13px",
-            maskImage: "radial-gradient(circle at 30% 30%, #000, transparent 72%)",
-          }}
-        />
-        <div
-          className="absolute top-44 right-[3%] hidden h-28 w-28 rotate-12 opacity-35 lg:block"
-          style={{
-            backgroundImage: "radial-gradient(#EFC46A 1.3px, transparent 1.3px)",
-            backgroundSize: "13px 13px",
-            maskImage: "radial-gradient(circle at 60% 40%, #000, transparent 72%)",
-          }}
-        />
         <span className="absolute top-24 left-[9%] hidden h-20 w-20 rounded-full border border-dashed border-[#BCD3F4] lg:block" />
         <span className="absolute top-[46%] right-[10%] hidden h-14 w-14 rounded-[1.1rem] border border-[#FFE9BE] bg-white/30 lg:block" />
         <Sparkle size={20} className="absolute top-36 left-[19%] hidden text-[#7FA9E8] lg:block" />
@@ -80,17 +64,12 @@ export default function Hero() {
 
       <div className="relative mx-auto w-full max-w-[1000px] px-4 pt-4 pb-2 sm:px-6 sm:pt-6">
         <div className="animate-fade-in-up flex justify-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/90 bg-white/65 px-3.5 py-1.5 text-[9.5px] font-bold tracking-[0.14em] whitespace-nowrap uppercase shadow-[0_10px_24px_-18px_rgba(11,30,63,0.4)] backdrop-blur-sm sm:text-[10px]">
-            <span className="relative flex h-1.5 w-1.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
-            </span>
-            <span style={{ color: "var(--ink)" }}>Goa is live</span>
-            <span className="h-3 w-px bg-[#D5E2F5]" />
-            <span className="font-semibold tracking-normal normal-case" style={{ color: "var(--muted)" }}>
-              1,483 schools onboarded
-            </span>
-          </span>
+          <p
+            className="text-[10px] font-bold tracking-[0.16em] uppercase sm:text-[11px]"
+            style={{ color: "#1A73E9" }}
+          >
+            India&rsquo;s Connected School Governance Ecosystem
+          </p>
         </div>
 
         <h1
@@ -100,14 +79,22 @@ export default function Hero() {
             fontSize: "clamp(2.2rem, 5.2vw, 3.5rem)",
           }}
         >
-          Every school. Every record.
+          Bringing Every School Together on
           <br />
-          <span className="relative inline-block" style={{ color: "var(--brand)" }}>
-            One platform.
+          <span
+            className="font-script relative inline-block tracking-normal whitespace-nowrap"
+            style={{
+              color: "#1A73E9",
+              fontSize: "1.12em",
+              fontWeight: 700,
+              lineHeight: 1,
+            }}
+          >
+            One Platform
             <svg
               viewBox="0 0 240 12"
               preserveAspectRatio="none"
-              className="absolute -bottom-1.5 left-[2%] h-2 w-[96%] text-[#FFB01F] sm:-bottom-2 sm:h-2.5"
+              className="absolute -bottom-1 left-[2%] h-2 w-[96%] text-[#FFB01F] sm:-bottom-1.5 sm:h-2.5"
               aria-hidden="true"
               focusable="false"
             >
@@ -123,15 +110,44 @@ export default function Hero() {
         </h1>
 
         <p
-          className="animate-fade-in-up animation-delay-200 mx-auto mt-3.5 max-w-[560px] text-center text-[15px] leading-relaxed sm:text-base"
+          className="animate-fade-in-up animation-delay-200 mx-auto mt-3.5 max-w-[720px] text-center text-[15px] leading-relaxed sm:text-base"
           style={{ color: "var(--muted)" }}
         >
           SamarthX brings governance, administration, people and student
-          journeys into one connected platform — live across Goa&rsquo;s
-          schools.
+          journeys into one secure digital platform helping education teams move
+          faster and make better decisions.
         </p>
 
-        <div className="mt-6 grid gap-5 lg:mt-7 lg:grid-cols-[0.82fr_2.05fr_0.82fr] lg:items-center lg:gap-6">
+        <div className="animate-fade-in-up animation-delay-400 mt-4 flex justify-center lg:mt-5">
+          <Link
+            href="/about-us"
+            className="group inline-flex items-center gap-2.5 rounded-full px-6 py-3 text-sm font-bold text-white no-underline shadow-[0_18px_32px_-18px_rgba(13,67,167,0.9)] transition-transform duration-300 hover:-translate-y-0.5"
+            style={{
+              background: "linear-gradient(135deg, #1A73E9 0%, #0D43A7 100%)",
+            }}
+          >
+            Learn About Us
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+              focusable="false"
+              className="transition-transform duration-300 group-hover:translate-x-0.5"
+            >
+              <path
+                d="M4 12h15m0 0-5.5-5.5M19 12l-5.5 5.5"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </Link>
+        </div>
+
+        <div className="mt-4 grid gap-5 lg:mt-5 lg:grid-cols-[0.82fr_2.05fr_0.82fr] lg:items-center lg:gap-6">
           <div className="order-2 grid grid-cols-2 items-stretch gap-4 lg:contents">
             <aside className="animate-fade-in-up animation-delay-400 lg:order-1">
               <div className="relative flex h-full w-full flex-col items-center justify-center rounded-[1.35rem] border border-white/90 bg-white/60 px-3.5 py-5 text-center shadow-[0_24px_44px_-38px_rgba(11,30,63,0.5)] backdrop-blur-sm transition-transform duration-300 hover:rotate-0 lg:-rotate-2 lg:px-4">
