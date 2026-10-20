@@ -62,7 +62,7 @@ export default function Hero() {
         <Sparkle size={12} className="absolute top-[40%] right-[19%] hidden text-[#E9B64C] lg:block" />
       </div>
 
-      <div className="relative mx-auto w-full max-w-[1000px] px-4 pt-4 pb-2 sm:px-6 sm:pt-6">
+      <div className="relative mx-auto w-full max-w-[1000px] px-4 pt-4 pb-2 sm:px-6 sm:pt-6 xl:max-w-[1320px] 2xl:max-w-[1440px]">
         <div className="animate-fade-in-up flex justify-center">
           <p
             className="text-[10px] font-bold tracking-[0.16em] uppercase sm:text-[11px]"
@@ -148,9 +148,9 @@ export default function Hero() {
           </Link>
         </div>
 
-        <div className="mt-4 grid gap-5 lg:mt-4 lg:grid-cols-[0.82fr_2.05fr_0.82fr] lg:gap-x-6 lg:gap-y-4">
+        <div className="mt-4 grid gap-5 lg:mt-4 lg:grid-cols-[0.82fr_2.05fr_0.82fr] lg:gap-x-6 lg:gap-y-4 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_500px_minmax(0,1fr)_minmax(0,1fr)] xl:gap-x-4 2xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_540px_minmax(0,1fr)_minmax(0,1fr)]">
           <div className="order-2 grid grid-cols-2 items-stretch gap-4 lg:contents">
-            <aside className="animate-fade-in-up animation-delay-400 lg:col-start-1 lg:row-start-1">
+            <aside className="animate-fade-in-up animation-delay-400 lg:col-start-1 lg:row-start-1 xl:self-center">
               <div className="relative flex h-full w-full flex-col items-center justify-center rounded-[1.35rem] border border-white/90 bg-white/60 px-3.5 py-4 text-center shadow-[0_24px_44px_-38px_rgba(11,30,63,0.5)] backdrop-blur-sm transition-transform duration-300 hover:rotate-0 lg:-rotate-2 lg:px-4">
                 <span
                   className="absolute -top-2 left-1/2 h-4 w-14 -translate-x-1/2 -rotate-2 rounded-[3px] bg-[#C4D9FA]/90 shadow-sm"
@@ -189,7 +189,7 @@ export default function Hero() {
               </div>
             </aside>
 
-            <aside className="animate-fade-in-up animation-delay-400 lg:col-start-3 lg:row-start-1">
+            <aside className="animate-fade-in-up animation-delay-400 lg:col-start-3 lg:row-start-1 xl:col-start-4 xl:self-center">
               <div className="relative flex h-full w-full flex-col items-center justify-center rounded-[1.35rem] border border-white/90 bg-gradient-to-br from-[#FFF3D6] via-[#FFFBF0] to-white/70 px-3.5 py-5 text-center shadow-[0_24px_44px_-38px_rgba(11,30,63,0.5)] backdrop-blur-sm transition-transform duration-300 hover:rotate-0 lg:rotate-2 lg:px-4">
                 <span
                   className="absolute -top-2 left-1/2 h-4 w-14 -translate-x-1/2 rotate-2 rounded-[3px] bg-[#FFE2A8]/95 shadow-sm"
@@ -218,7 +218,7 @@ export default function Hero() {
               </div>
             </aside>
 
-            <aside className="animate-fade-in-up animation-delay-400 lg:col-start-1 lg:row-start-2">
+            <aside className="animate-fade-in-up animation-delay-400 lg:col-start-1 lg:row-start-2 xl:col-start-2 xl:row-start-1 xl:self-center">
               <div className="relative flex h-full w-full flex-col items-center justify-center rounded-[1.35rem] border border-white/90 bg-gradient-to-br from-[#FFF3D6] via-[#FFFBF0] to-white/70 px-3.5 py-3.5 text-center shadow-[0_24px_44px_-38px_rgba(11,30,63,0.5)] backdrop-blur-sm transition-transform duration-300 hover:rotate-0 lg:rotate-[1.5deg] lg:px-4">
                 <span
                   className="absolute -top-2 left-1/2 h-4 w-14 -translate-x-1/2 rotate-1 rounded-[3px] bg-[#FFE2A8]/95 shadow-sm"
@@ -249,7 +249,7 @@ export default function Hero() {
               </div>
             </aside>
 
-            <aside className="animate-fade-in-up animation-delay-400 lg:col-start-3 lg:row-start-2">
+            <aside className="animate-fade-in-up animation-delay-400 lg:col-start-3 lg:row-start-2 xl:col-start-5 xl:row-start-1 xl:self-center">
               <div className="relative flex h-full w-full flex-col items-center justify-center rounded-[1.35rem] border border-white/90 bg-white/60 px-3.5 py-4 text-center shadow-[0_24px_44px_-38px_rgba(11,30,63,0.5)] backdrop-blur-sm transition-transform duration-300 hover:rotate-0 lg:-rotate-[1.5deg] lg:px-4">
                 <span
                   className="absolute -top-2 left-1/2 h-4 w-14 -translate-x-1/2 -rotate-1 rounded-[3px] bg-[#C4D9FA]/90 shadow-sm"
@@ -289,7 +289,7 @@ export default function Hero() {
             </aside>
           </div>
 
-          <div className="animate-fade-in-up animation-delay-200 order-1 lg:order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:self-center">
+          <div className="animate-fade-in-up animation-delay-200 order-1 lg:order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:self-center xl:col-start-3 xl:row-span-1">
             <div className="group relative">
               <div
                 className="pointer-events-none absolute -inset-2.5 -z-10 rounded-[2rem] bg-gradient-to-br from-[#C9DDFF]/70 via-transparent to-[#FFE3AC]/70 blur-lg"
