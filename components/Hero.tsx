@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CapDoodle, Sparkle } from "./Art";
+import { AdmissionsArt, CapDoodle, SchoolDoodle, Sparkle } from "./Art";
 
 const AVATARS = [
   { src: "/images/news/nep-schools.webp", alt: "Students in a Goa classroom" },
@@ -148,10 +148,10 @@ export default function Hero() {
           </Link>
         </div>
 
-        <div className="mt-4 grid gap-5 lg:mt-4 lg:grid-cols-[0.82fr_2.05fr_0.82fr] lg:items-center lg:gap-6">
+        <div className="mt-4 grid gap-5 lg:mt-4 lg:grid-cols-[0.82fr_2.05fr_0.82fr] lg:gap-x-6 lg:gap-y-4">
           <div className="order-2 grid grid-cols-2 items-stretch gap-4 lg:contents">
-            <aside className="animate-fade-in-up animation-delay-400 lg:order-1">
-              <div className="relative flex h-full w-full flex-col items-center justify-center rounded-[1.35rem] border border-white/90 bg-white/60 px-3.5 py-5 text-center shadow-[0_24px_44px_-38px_rgba(11,30,63,0.5)] backdrop-blur-sm transition-transform duration-300 hover:rotate-0 lg:-rotate-2 lg:px-4">
+            <aside className="animate-fade-in-up animation-delay-400 lg:col-start-1 lg:row-start-1">
+              <div className="relative flex h-full w-full flex-col items-center justify-center rounded-[1.35rem] border border-white/90 bg-white/60 px-3.5 py-4 text-center shadow-[0_24px_44px_-38px_rgba(11,30,63,0.5)] backdrop-blur-sm transition-transform duration-300 hover:rotate-0 lg:-rotate-2 lg:px-4">
                 <span
                   className="absolute -top-2 left-1/2 h-4 w-14 -translate-x-1/2 -rotate-2 rounded-[3px] bg-[#C4D9FA]/90 shadow-sm"
                   aria-hidden="true"
@@ -189,7 +189,7 @@ export default function Hero() {
               </div>
             </aside>
 
-            <aside className="animate-fade-in-up animation-delay-400 lg:order-3">
+            <aside className="animate-fade-in-up animation-delay-400 lg:col-start-3 lg:row-start-1">
               <div className="relative flex h-full w-full flex-col items-center justify-center rounded-[1.35rem] border border-white/90 bg-gradient-to-br from-[#FFF3D6] via-[#FFFBF0] to-white/70 px-3.5 py-5 text-center shadow-[0_24px_44px_-38px_rgba(11,30,63,0.5)] backdrop-blur-sm transition-transform duration-300 hover:rotate-0 lg:rotate-2 lg:px-4">
                 <span
                   className="absolute -top-2 left-1/2 h-4 w-14 -translate-x-1/2 rotate-2 rounded-[3px] bg-[#FFE2A8]/95 shadow-sm"
@@ -217,9 +217,79 @@ export default function Hero() {
                 <Sparkle size={11} className="absolute bottom-4 right-3 text-[#E9B23C]" />
               </div>
             </aside>
+
+            <aside className="animate-fade-in-up animation-delay-400 lg:col-start-1 lg:row-start-2">
+              <div className="relative flex h-full w-full flex-col items-center justify-center rounded-[1.35rem] border border-white/90 bg-gradient-to-br from-[#FFF3D6] via-[#FFFBF0] to-white/70 px-3.5 py-3.5 text-center shadow-[0_24px_44px_-38px_rgba(11,30,63,0.5)] backdrop-blur-sm transition-transform duration-300 hover:rotate-0 lg:rotate-[1.5deg] lg:px-4">
+                <span
+                  className="absolute -top-2 left-1/2 h-4 w-14 -translate-x-1/2 rotate-1 rounded-[3px] bg-[#FFE2A8]/95 shadow-sm"
+                  aria-hidden="true"
+                />
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/85 shadow-sm ring-1 ring-[#FFE2A8]">
+                  <AdmissionsArt size={24} />
+                </span>
+                <p
+                  className="font-display mt-1.5 text-[2rem] leading-none font-extrabold tracking-tight"
+                  style={{ color: "var(--ink)" }}
+                >
+                  5,000<span style={{ color: "#C98A00" }}>+</span>
+                </p>
+                <p
+                  className="mt-1.5 text-[11.5px] font-semibold"
+                  style={{ color: "var(--ink)" }}
+                >
+                  Admissions delivered
+                </p>
+                <p
+                  className="mt-0.5 text-[10px] leading-snug"
+                  style={{ color: "var(--muted)" }}
+                >
+                  One window for every student
+                </p>
+                <Sparkle size={11} className="absolute bottom-4 right-3 text-[#E9B23C]" />
+              </div>
+            </aside>
+
+            <aside className="animate-fade-in-up animation-delay-400 lg:col-start-3 lg:row-start-2">
+              <div className="relative flex h-full w-full flex-col items-center justify-center rounded-[1.35rem] border border-white/90 bg-white/60 px-3.5 py-4 text-center shadow-[0_24px_44px_-38px_rgba(11,30,63,0.5)] backdrop-blur-sm transition-transform duration-300 hover:rotate-0 lg:-rotate-[1.5deg] lg:px-4">
+                <span
+                  className="absolute -top-2 left-1/2 h-4 w-14 -translate-x-1/2 -rotate-1 rounded-[3px] bg-[#C4D9FA]/90 shadow-sm"
+                  aria-hidden="true"
+                />
+                <span
+                  className="flex h-11 w-11 items-center justify-center rounded-full text-white shadow-[0_14px_24px_-14px_rgba(13,67,167,0.75)]"
+                  style={{
+                    background:
+                      "linear-gradient(145deg, #1A73E9 0%, #0D43A7 55%, #08307E 100%)",
+                  }}
+                >
+                  <SchoolDoodle className="h-6 w-6" />
+                </span>
+                <p
+                  className="mt-2.5 text-[8.5px] font-bold uppercase tracking-[0.18em]"
+                  style={{ color: "var(--brand)" }}
+                >
+                  The reach
+                </p>
+                <p
+                  className="mt-1.5 font-display text-[12.5px] leading-snug font-bold"
+                  style={{ color: "var(--ink)" }}
+                >
+                  1,483 schools connected across Goa.
+                </p>
+                <Link
+                  href="/state-onboarded"
+                  className="mt-3 inline-flex items-center gap-1.5 text-[11.5px] font-bold no-underline transition-all hover:gap-2.5"
+                  style={{ color: "var(--brand)" }}
+                >
+                  See the rollout
+                  <GoArrow size={12} />
+                </Link>
+                <Sparkle size={11} className="absolute top-4 right-3 text-[#A6C7F5]" />
+              </div>
+            </aside>
           </div>
 
-          <div className="animate-fade-in-up animation-delay-200 order-1 lg:order-2">
+          <div className="animate-fade-in-up animation-delay-200 order-1 lg:order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:self-center">
             <div className="group relative">
               <div
                 className="pointer-events-none absolute -inset-2.5 -z-10 rounded-[2rem] bg-gradient-to-br from-[#C9DDFF]/70 via-transparent to-[#FFE3AC]/70 blur-lg"
