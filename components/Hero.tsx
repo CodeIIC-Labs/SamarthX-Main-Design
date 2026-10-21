@@ -238,7 +238,7 @@ export default function Hero() {
         <Sparkle size={12} className="absolute top-[40%] right-[19%] hidden text-[#E9B64C] lg:block" />
       </div>
 
-      <div className="relative mx-auto w-full max-w-[1000px] px-4 pt-4 pb-2 sm:px-6 sm:pt-6 xl:max-w-[1320px] 2xl:max-w-[1440px]">
+      <div className="relative mx-auto w-full max-w-[1000px] px-4 pt-5 pb-2 sm:px-6 sm:pt-7 xl:max-w-[1320px] 2xl:max-w-[1440px]">
         <div className="animate-fade-in-up flex justify-center">
           <p
             className="text-[10px] font-bold tracking-[0.16em] uppercase sm:text-[11px]"
@@ -249,7 +249,7 @@ export default function Hero() {
         </div>
 
         <h1
-          className="animate-fade-in-up animation-delay-200 mx-auto mt-2.5 max-w-[1000px] text-center leading-[1.05] font-extrabold tracking-[-0.035em] sm:mt-2.5"
+          className="animate-fade-in-up animation-delay-200 mx-auto mt-3.5 max-w-[1000px] text-center leading-[1.08] font-extrabold tracking-[-0.035em] sm:mt-4 sm:leading-[1.05]"
           style={{
             color: "var(--ink)",
             fontSize: "clamp(2.2rem, 5.2vw, 3.4rem)",
@@ -287,7 +287,7 @@ export default function Hero() {
         </h1>
 
         <p
-          className="animate-fade-in-up animation-delay-200 mx-auto mt-3 max-w-[720px] text-center text-[15px] leading-relaxed sm:text-base"
+          className="animate-fade-in-up animation-delay-200 mx-auto mt-5 max-w-[720px] text-center text-[15px] leading-relaxed sm:mt-4 sm:text-base"
           style={{ color: "var(--muted)" }}
         >
           SamarthX brings governance, administration, people and student
@@ -295,7 +295,7 @@ export default function Hero() {
           faster and make better decisions.
         </p>
 
-        <div className="animate-fade-in-up animation-delay-400 mt-4 flex justify-center lg:mt-4">
+        <div className="animate-fade-in-up animation-delay-400 mt-6 flex justify-center sm:mt-5">
           <Link
             href="/about-us"
             className="group inline-flex items-center gap-2.5 rounded-full px-6 py-3 text-sm font-bold text-white no-underline shadow-[0_18px_32px_-18px_rgba(13,67,167,0.9)] transition-transform duration-300 hover:-translate-y-0.5"
@@ -324,7 +324,7 @@ export default function Hero() {
           </Link>
         </div>
 
-        <div className="mt-4 grid gap-5 lg:mt-4 lg:grid-cols-[0.82fr_2.05fr_0.82fr] lg:gap-x-6 lg:gap-y-4 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_500px_minmax(0,1fr)_minmax(0,1fr)] xl:gap-x-4 2xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_540px_minmax(0,1fr)_minmax(0,1fr)]">
+        <div className="mt-6 grid gap-x-5 gap-y-6 lg:grid-cols-[0.82fr_2.05fr_0.82fr] lg:gap-x-6 lg:gap-y-4 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_500px_minmax(0,1fr)_minmax(0,1fr)] xl:gap-x-5 2xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_540px_minmax(0,1fr)_minmax(0,1fr)] 2xl:gap-x-6">
           <div className="hidden lg:contents">
             {CARD_ORDER.map((kind) => (
               <aside
@@ -398,7 +398,7 @@ export default function Hero() {
           </div>
 
           <div
-            className="hero-marquee order-2 py-3 lg:hidden"
+            className="hero-marquee order-2 pt-4 pb-6 lg:hidden"
             aria-label="SamarthX platform highlights"
           >
             <div className="hero-marquee-track flex">
