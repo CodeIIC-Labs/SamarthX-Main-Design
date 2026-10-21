@@ -295,7 +295,7 @@ export default function Hero() {
           faster and make better decisions.
         </p>
 
-        <div className="mt-8 grid gap-x-5 gap-y-6 lg:grid-cols-[0.82fr_2.05fr_0.82fr] lg:gap-x-6 lg:gap-y-4 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_460px_minmax(0,1fr)_minmax(0,1fr)] xl:gap-x-5 2xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_480px_minmax(0,1fr)_minmax(0,1fr)] 2xl:gap-x-6">
+        <div className="mt-10 grid gap-x-5 gap-y-6 lg:grid-cols-[0.82fr_2.05fr_0.82fr] lg:gap-x-6 lg:gap-y-4 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_460px_minmax(0,1fr)_minmax(0,1fr)] xl:gap-x-5 2xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_480px_minmax(0,1fr)_minmax(0,1fr)] 2xl:gap-x-6">
           <div className="hidden lg:contents">
             {CARD_ORDER.map((kind) => (
               <aside
