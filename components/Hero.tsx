@@ -218,7 +218,10 @@ const MOBILE_STATS = [
 
 export default function Hero() {
   return (
-    <section className="relative" aria-label="Hero">
+    <section
+      className="relative flex min-h-[calc(100svh-var(--site-header-height))] flex-col lg:block lg:min-h-0"
+      aria-label="Hero"
+    >
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
         <div className="absolute -top-8 -left-24 h-72 w-72 rounded-full bg-[#CFE1FF] opacity-60 blur-3xl" />
         <div className="absolute top-12 -right-20 h-64 w-64 rounded-full bg-[#FFE3AD] opacity-55 blur-3xl" />
