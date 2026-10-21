@@ -210,21 +210,11 @@ function StatCard({ kind }: { kind: CardKind }) {
   );
 }
 
-function MarqueeSet({ clone = false }: { clone?: boolean }) {
-  return (
-    <div
-      className="flex shrink-0 gap-4 pr-4"
-      aria-hidden={clone || undefined}
-      inert={clone || undefined}
-    >
-      {CARD_ORDER.map((kind) => (
-        <div key={kind} className="w-[200px] shrink-0">
-          <StatCard kind={kind} />
-        </div>
-      ))}
-    </div>
-  );
-}
+const MOBILE_STATS = [
+  { value: "20,877", suffix: "", label: "Employees" },
+  { value: "5,000", suffix: "+", label: "Admissions" },
+  { value: "1,483", suffix: "", label: "Schools" },
+];
 
 export default function Hero() {
   return (
@@ -241,7 +231,7 @@ export default function Hero() {
       <div className="relative mx-auto w-full max-w-[1000px] px-4 pt-8 pb-8 sm:px-6 sm:pt-10 sm:pb-10 xl:max-w-[1320px] xl:pt-12 2xl:max-w-[1440px]">
         <div className="animate-fade-in-up flex justify-center">
           <p
-            className="text-[10px] font-bold tracking-[0.16em] uppercase sm:text-[11px]"
+            className="text-center text-[9px] font-bold tracking-[0.12em] uppercase sm:text-[11px] sm:tracking-[0.16em]"
             style={{ color: "#1A73E9" }}
           >
             India&rsquo;s Connected School Governance Ecosystem
@@ -336,7 +326,7 @@ export default function Hero() {
                   LIVE IN GOA
                 </span>
 
-                <div className="absolute inset-x-2.5 bottom-2.5 flex items-center justify-between gap-2 rounded-full bg-white/90 py-1.5 pr-2 pl-3 shadow-[0_10px_24px_-12px_rgba(7,26,56,0.5)] backdrop-blur-md sm:inset-x-3 sm:bottom-3 sm:px-4">
+                <div className="absolute inset-x-2.5 bottom-2.5 hidden items-center justify-between gap-2 rounded-full bg-white/90 py-1.5 pr-2 pl-3 shadow-[0_10px_24px_-12px_rgba(7,26,56,0.5)] backdrop-blur-md sm:inset-x-3 sm:bottom-3 sm:px-4 lg:flex">
                   <span
                     className="flex items-center gap-1.5 text-[9.5px] font-semibold whitespace-nowrap sm:text-[10.5px]"
                     style={{ color: "var(--ink)" }}
@@ -367,15 +357,44 @@ export default function Hero() {
               </div>
             </div>
           </div>
+        </div>
 
-          <div
-            className="hero-marquee order-2 pt-4 pb-6 lg:hidden"
-            aria-label="SamarthX platform highlights"
-          >
-            <div className="hero-marquee-track flex">
-              <MarqueeSet />
-              <MarqueeSet clone />
+        <div className="animate-fade-in-up animation-delay-400 mt-7 lg:hidden">
+          <div className="mx-auto max-w-[420px]">
+            <div className="grid grid-cols-3 divide-x divide-[#0B1E3F]/10 border-t border-[#0B1E3F]/10 pt-5">
+              {MOBILE_STATS.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="flex flex-col items-center px-2 text-center"
+                >
+                  <p
+                    className="font-display text-[1.15rem] leading-none font-extrabold tracking-tight sm:text-[1.35rem]"
+                    style={{ color: "var(--ink)" }}
+                  >
+                    {stat.value}
+                    {stat.suffix ? (
+                      <span style={{ color: "#C98A00" }}>{stat.suffix}</span>
+                    ) : null}
+                  </p>
+                  <p
+                    className="mt-1.5 text-[8.5px] font-bold tracking-[0.14em] uppercase sm:text-[9.5px]"
+                    style={{ color: "var(--muted)" }}
+                  >
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
             </div>
+            <p
+              className="mt-4 flex items-center justify-center gap-1.5 text-[10.5px] font-medium"
+              style={{ color: "var(--muted)" }}
+            >
+              <span
+                className="h-1.5 w-1.5 rounded-full bg-emerald-500"
+                aria-hidden="true"
+              />
+              UDISE+ synced
+            </p>
           </div>
         </div>
       </div>
