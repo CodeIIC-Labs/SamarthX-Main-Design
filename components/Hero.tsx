@@ -228,7 +228,7 @@ export default function Hero() {
         <Sparkle size={12} className="absolute top-[40%] right-[19%] hidden text-[#E9B64C] lg:block" />
       </div>
 
-      <div className="relative mx-auto w-full max-w-[1000px] px-4 pt-8 pb-8 sm:px-6 sm:pt-10 sm:pb-10 xl:max-w-[1320px] xl:pt-12 2xl:max-w-[1440px]">
+      <div className="relative mx-auto w-full max-w-[1000px] px-4 pt-12 pb-8 sm:px-6 sm:pt-12 sm:pb-10 xl:max-w-[1320px] xl:pt-12 2xl:max-w-[1440px]">
         <div className="animate-fade-in-up flex justify-center">
           <p
             className="text-center text-[9px] font-bold tracking-[0.12em] uppercase sm:text-[11px] sm:tracking-[0.16em]"
@@ -285,7 +285,7 @@ export default function Hero() {
           faster and make better decisions.
         </p>
 
-        <div className="mt-10 grid gap-x-5 gap-y-6 lg:grid-cols-[0.82fr_2.05fr_0.82fr] lg:gap-x-6 lg:gap-y-4 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_460px_minmax(0,1fr)_minmax(0,1fr)] xl:gap-x-5 2xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_480px_minmax(0,1fr)_minmax(0,1fr)] 2xl:gap-x-6">
+        <div className="mt-14 grid gap-x-5 gap-y-6 sm:mt-12 lg:mt-10 lg:grid-cols-[0.82fr_2.05fr_0.82fr] lg:gap-x-6 lg:gap-y-4 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_460px_minmax(0,1fr)_minmax(0,1fr)] xl:gap-x-5 2xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_480px_minmax(0,1fr)_minmax(0,1fr)] 2xl:gap-x-6">
           <div className="hidden lg:contents">
             {CARD_ORDER.map((kind) => (
               <aside
