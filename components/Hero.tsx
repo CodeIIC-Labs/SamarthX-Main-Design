@@ -295,36 +295,7 @@ export default function Hero() {
           faster and make better decisions.
         </p>
 
-        <div className="animate-fade-in-up animation-delay-400 mt-6 flex justify-center sm:mt-5">
-          <Link
-            href="/about-us"
-            className="group inline-flex items-center gap-2.5 rounded-full px-6 py-3 text-sm font-bold text-white no-underline shadow-[0_18px_32px_-18px_rgba(13,67,167,0.9)] transition-transform duration-300 hover:-translate-y-0.5"
-            style={{
-              background: "linear-gradient(135deg, #1A73E9 0%, #0D43A7 100%)",
-            }}
-          >
-            Learn About Us
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              aria-hidden="true"
-              focusable="false"
-              className="transition-transform duration-300 group-hover:translate-x-0.5"
-            >
-              <path
-                d="M4 12h15m0 0-5.5-5.5M19 12l-5.5 5.5"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </Link>
-        </div>
-
-        <div className="mt-6 grid gap-x-5 gap-y-6 lg:grid-cols-[0.82fr_2.05fr_0.82fr] lg:gap-x-6 lg:gap-y-4 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_460px_minmax(0,1fr)_minmax(0,1fr)] xl:gap-x-5 2xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_480px_minmax(0,1fr)_minmax(0,1fr)] 2xl:gap-x-6">
+        <div className="mt-8 grid gap-x-5 gap-y-6 lg:grid-cols-[0.82fr_2.05fr_0.82fr] lg:gap-x-6 lg:gap-y-4 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_460px_minmax(0,1fr)_minmax(0,1fr)] xl:gap-x-5 2xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_480px_minmax(0,1fr)_minmax(0,1fr)] 2xl:gap-x-6">
           <div className="hidden lg:contents">
             {CARD_ORDER.map((kind) => (
               <aside
