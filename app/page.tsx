@@ -3,6 +3,7 @@ import FieldNotes from "@/components/FieldNotes";
 import Hero from "@/components/Hero";
 import PortalGrid from "@/components/PortalGrid";
 import SmarterWay from "@/components/SmarterWay";
+import StageHero from "@/components/StageHero";
 import Story from "@/components/Story";
 import WhyBand from "@/components/WhyBand";
 
@@ -12,6 +13,7 @@ export default function Home() {
       <div className="home-pattern" aria-hidden="true" />
 
       <div className="relative z-[1]">
+        <StageHero />
         <Hero />
         <WhyBand />
         <Story />

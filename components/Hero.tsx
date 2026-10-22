@@ -218,10 +218,7 @@ const MOBILE_STATS = [
 
 export default function Hero() {
   return (
-    <section
-      className="relative flex min-h-[calc(100svh-var(--site-header-height))] flex-col lg:block lg:min-h-0"
-      aria-label="Hero"
-    >
+    <section className="relative" aria-label="Hero">
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
         <div className="absolute -top-8 -left-24 h-72 w-72 rounded-full bg-[#CFE1FF] opacity-60 blur-3xl" />
         <div className="absolute top-12 -right-20 h-64 w-64 rounded-full bg-[#FFE3AD] opacity-55 blur-3xl" />
@@ -241,7 +238,7 @@ export default function Hero() {
           </p>
         </div>
 
-        <h1
+        <h2
           className="animate-fade-in-up animation-delay-200 mx-auto mt-3.5 max-w-[1000px] text-center leading-[1.08] font-extrabold tracking-[-0.035em] sm:mt-4 sm:leading-[1.05]"
           style={{
             color: "var(--ink)",
@@ -277,7 +274,7 @@ export default function Hero() {
               />
             </svg>
           </span>
-        </h1>
+        </h2>
 
         <p
           className="animate-fade-in-up animation-delay-200 mx-auto mt-5 max-w-[720px] text-center text-[15px] leading-relaxed sm:mt-4 sm:text-base"
